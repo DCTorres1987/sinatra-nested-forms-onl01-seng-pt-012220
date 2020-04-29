@@ -1,11 +1,17 @@
-<h1>Display your Pirate here</h1>
-<body>
-  <p>Puppy Name: <%= @puppy.name %></p>
-  <p>Puppy Breed: <%= @puppy.breed %></p>
-  <p>Puppy Age: <%= @puppy.age %> months</p>
-</body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pirate!</title>
+  </head>
+  <body>
+    <p><%= @pirate.name %></p>
+    <p><%= @pirate.height %></p>
+    <p><%= @pirate.weight %></p>
 
-<h2>Display your first ship here</h2>
-
-
-<h2>Display your second ship here</h2>
+    <p><% @ships.each do |ship| %>
+      <%= ship.name %>
+      <%= ship.type %>
+      <%= ship.booty %>
+    <% end %></p>
+  </body>
+</html>
